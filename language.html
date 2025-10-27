@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ژبه - پښتو ویب پاڼه</title>
+    <!-- Same CSS as about.html -->
+    <style>
+        /* Include all CSS from about.html here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-left: 10px;
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        nav ul li a:hover, nav ul li a.active {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            color: #e74c3c;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #e74c3c;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #e74c3c;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+            min-height: 60vh;
+        }
+        
+        .page-hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .content-section h2 {
+            color: #2a5298;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .content-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .content-section ul {
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .content-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .alphabet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .alphabet-table th, .alphabet-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .alphabet-table th {
+            background-color: #2a5298;
+            color: white;
+        }
+        
+        .alphabet-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .language-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #2a5298;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .alphabet-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-mountain"></i>
+                    <span>پښتو ویب پاڼه</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">کور</a></li>
+                        <li><a href="about.html">زموږ په اړه</a></li>
+                        <li><a href="culture.html">کلتور</a></li>
+                        <li><a href="language.html" class="active">ژبه</a></li>
+                        <li><a href="history.html">تاریخ</a></li>
+                        <li><a href="contact.html">اړیکه</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>پښتو ژبه</h1>
+            <p>د پښتو ژبې تاریخ، قواعد، الفبا او د زده کړې لارښودونه</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>د پښتو ژبې تاریخ</h2>
+                <p>پښتو ژبه د افغانستان د دوو رسمي ژبو څخه یوه ده او په پاکستان کې هم د پښتانو مادري ژبه ده. دا ژبه د هندي-اروپايي ژبو د کورنۍ د ایرانۍ ژبو یوه مهمه ژبه ده.</p>
+                <p>د پښتو ژبې تاریخ د درېیو پړاونو ته وېشل کېږي:</p>
+                <ul>
+                    <li><strong>لرغونی پښتو (له میلاد څخه مخکې ۷۰۰ - ۳۰۰):</strong> د لرغوني پښتو ژبې اثار په لرغونو افسانو او دودونو کې موندل کېږي.</li>
+                    <li><strong>منځنی پښتو (۳۰۰ - ۱۲۰۰):</strong> په دې پړاو کې پښتو ژبه د عربي الفبا په کارولو سره لیکل کېدله.</li>
+                    <li><strong>نوی پښتو (۱۲۰۰ - تر اوسه):</strong> په دې پړاو کې پښتو ژبه د خپل اوسني بڼې ته ورسېده او د پښتو ادب زېږنده شوه.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>د پښتو ژبې الفبا</h2>
+                <p>پښتو ژبه د عربي-فارسي الفبا په بنسټ لیکل کېږي، خو د پښتو ژبې لپاره ځانګړې حروف هم شته دي. د پښتو الفبا ۴۴ حروف لري.</p>
+                
+                <table class="alphabet-table">
+                    <thead>
+                        <tr>
+                            <th>حرف</th>
+                            <th>نوم</th>
+                            <th>تلفظ</th>
+                            <th>بېلګه</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ا</td>
+                            <td>الف</td>
+                            <td>a</td>
+                            <td>اسمان</td>
+                        </tr>
+                        <tr>
+                            <td>ب</td>
+                            <td>بې</td>
+                            <td>b</td>
+                            <td>بچی</td>
+                        </tr>
+                        <tr>
+                            <td>پ</td>
+                            <td>پې</td>
+                            <td>p</td>
+                            <td>پلار</td>
+                        </tr>
+                        <tr>
+                            <td>ت</td>
+                            <td>تې</td>
+                            <td>t</td>
+                            <td>توره</td>
+                        </tr>
+                        <tr>
+                            <td>ټ</td>
+                            <td>ټې</td>
+                            <td>ṭ</td>
+                            <td>ټکټ</td>
+                        </tr>
+                        <tr>
+                            <td>ث</td>
+                            <td>ثې</td>
+                            <td>s</td>
+                            <td>ثواب</td>
+                        </tr>
+                        <tr>
+                            <td>ج</td>
+                            <td>جیم</td>
+                            <td>j</td>
+                            <td>جمعه</td>
+                        </tr>
+                        <tr>
+                            <td>چ</td>
+                            <td>چې</td>
+                            <td>ch</td>
+                            <td>چای</td>
+                        </tr>
+                        <tr>
+                            <td>څ</td>
+                            <td>څې</td>
+                            <td>ts</td>
+                            <td>څښل</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-section">
+                <h2>د پښتو ژبې ځانګړتیاوې</h2>
+                <div class="language-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>قواعدي جوړښت</h3>
+                        <p>پښتو ژبه د فاعل-مفعول-فعل په ترتیب لري. د پښتو ژبې قواعد د نورو ایرانۍ ژبو سره ورته والی لري.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <h3>ځانګړي حروف</h3>
+                        <p>پښتو ژبه څلور ځانګړي حروف لري چې په نورو ژبو کې نشته: ځ، څ، ښ، او ګ.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>بډایه ادب</h3>
+                        <p>پښتو ژبه یوه بډایه ادبي میراث لري چې په کې شاعري، داستان، او نور ادبي اثار شامل دي.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>د پښتو ژبې د زده کړې لارښود</h2>
+                <p>که تاسو غواړئ پښتو ژبه زده کړئ، لاندې ګامونو ته پاملرنه وکړئ:</p>
+                <ul>
+                    <li>د پښتو الفبا او تلفظ زده کړئ</li>
+                    <li>اسماني کلمې او جملې زده کړئ</li>
+                    <li>د پښتو قواعدي جوړښت زده کړئ</li>
+                    <li>د پښتو شاعري او ادب ولولئ</li>
+                    <li>د پښتو ژبې ویناوالو سره خبرې وکړئ</li>
+                </ul>
+                <p>موږ د پښتو ژبې د زده کړې لپاره وړیا منابع او درسونه وړاندې کوو. د زده کړې لپاره زموږ د ویب پاڼې په زده کړې برخه کې شامل شئ.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>پښتو ویب پاڼه</h3>
+                    <p>د پښتو ژبې، کلتور، ادب او تاریخ د وړاندې کولو لپاره یوه آنلاین پلیټفارم.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>لینکونه</h3>
+                    <ul>
+                        <li><a href="index.html">کور</a></li>
+                        <li><a href="about.html">زموږ په اړه</a></li>
+                        <li><a href="culture.html">کلتور</a></li>
+                        <li><a href="language.html">ژبه</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>نور لینکونه</h3>
+                    <ul>
+                        <li><a href="history.html">تاریخ</a></li>
+                        <li><a href="poetry.html">شاعري</a></li>
+                        <li><a href="music.html">موسیقي</a></li>
+                        <li><a href="contact.html">اړیکه</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>په اړیکه کې اوسئ</h3>
+                    <p>زموږ د وروستي اخبارونو لپاره زموږ د خبرونو لیست کې شامل شئ.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>ټول حقونه خوندي دي © ۲۰۲۳ پښتو ویب پاڼه</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
