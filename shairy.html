@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ps">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پښتو شعرې - Pashto Poetry</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Nazli', 'Segoe UI', sans-serif; /* Use a font that supports Pashto */
+            margin: 0;
+            padding: 0;
+            background-color: #f8f5e6; /* Parchment-like background */
+            color: #333;
+            line-height: 1.8;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(to right, #2c5530, #4a7c59); /* Green gradient, common in Afghan/Pashtun themes */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #d4af37; /* Gold accent */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Typography */
+        h1, h2 {
+            color: #2c5530;
+            text-align: center;
+        }
+        .poem {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border-right: 3px solid #d4af37;
+            border-left: 3px solid #d4af37;
+            background-color: #fefcf3;
+        }
+        .poem-text {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            white-space: pre-line; /* Preserves line breaks */
+        }
+        .poet, .translation {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+        .translation {
+            border-top: 1px dashed #ccc;
+            padding-top: 15px;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>زما د پښتو ژبې ورځ</h1>
+        <p>Mya de Pakhto Zhaba Wraja (My Pashto Language Day)</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">کور</a></li>
+                <li><a href="grammar.html">ګرامر</a></li>
+                <li><a href="culture.html">کلچر</a></li>
+                <li><a href="shairy.html"><strong>شعرې</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>د پښتو ادب زړه: شعرې</h2>
+        <p>په پښتو ادب کې شعرې ته ځانګړی مقام دی. دا چاپیریال، مینه، ملي حماسه او فلسفه انځوروي. دلته د پښتو ادب څخه یو څو مشهورې بېلګې وړاندې کوی.</p>
+
+        <!-- Poem 1 -->
+        <div class="poem">
+            <div class="poem-text">
+                ستا په زړه کیږم زه د زړه کور
+                په سترګو کیږم زه د سترګو ګور
+            </div>
+            <div class="poet">- رحمان بابا</div>
+            <div class="translation">
+                <strong>Transliteration:</strong> Sta pa zrha kegam za de zrha kor, Pa stargo kegam za de stargo gor.<br>
+                <strong>Translation:</strong> I will build a home of the heart in your heart, I will become the pupil of your eyes.
+            </div>
+        </div>
+
+        <!-- Poem 2 -->
+        <div class="poem">
+            <div class="poem-text">
+                د ډېرو خلکو خبرې مې واورېدلې
+                خو په زړه مې راشۀ هېڅ چا نه ده ویلې
+            </div>
+            <div class="poet">- خوشحال خان خټک</div>
+            <div class="translation">
+                <strong>Transliteration:</strong> D dero khalqo khabare me wawaredale, Kho pa zrha me rasha hech cha na de wale.<br>
+                <strong>Translation:</strong> I have heard the words of many people, But no one has said the words that enter my heart.
+            </div>
+        </div>
+
+        <!-- Poem 3 -->
+        <div class="poem">
+            <div class="poem-text">
+                دا ځواني څه ښکلی نعمت دی
+                په پام کې یې نشی نیولې
+            </div>
+            <div class="poet">- حمزه بابا شینواری</div>
+            <div class="translation">
+                <strong>Transliteration:</strong> Da zwani tsa shkali ne'mat dai, Pa pam ke ye nashee niwale.<br>
+                <strong>Translation:</strong> This youth is such a beautiful blessing, It cannot be held onto, no matter how much you try.
+            </div>
+        </div>
+
+        <h2>خپل شعر دلته ولیکئ</h2>
+        <p>ایا تاسو هم شعرونه لیکئ؟ خپل پښتو شعر دلته شریک کړئ.</p>
+        <!-- A simple form for user submission (for display, functionality would need backend) -->
+        <form action="#" method="post">
+            <label for="poet-name">ستاسو نوم:</label><br>
+            <input type="text" id="poet-name" name="poet-name"><br><br>
+            <label for="user-poem">ستاسو شعر:</label><br>
+            <textarea id="user-poem" name="user-poem" rows="5" style="width: 100%;"></textarea><br><br>
+            <input type="submit" value="ولېږئ">
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2023 زما د پښتو ژبې ورځ. ټول حقونه خوندي دي.</p>
+    </footer>
+</body>
+</html>
